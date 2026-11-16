@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gig Radar — paid gigs, bounties &amp; hackathons for beginners</title>
+<meta name="description" content="Every paid gig, bounty and hackathon that fits a beginner, in one place. Built for Kiroween 2026 (Frankenstein category).">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <span class="radar-dot" aria-hidden="true"></span>
+      <div>
+        <h1>Gig Radar</h1>
+        <p class="tagline">Paid gigs, bounties &amp; hackathons that fit a beginner — on one screen.</p>
+      </div>
+    </div>
+    <p class="header-note">Built for <strong>Kiroween 2026</strong> · Frankenstein category · Every entry verified live on 16 Nov 2026</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="stats" id="stats" aria-label="Overview">
+    <div class="stat"><span class="stat-num" id="stat-count">–</span><span class="stat-label">opportunities</span></div>
+    <div class="stat"><span class="stat-num" id="stat-prizes">–</span><span class="stat-label">total prizes &amp; pay tracked</span></div>
+    <div class="stat"><span class="stat-num" id="stat-closing">–</span><span class="stat-label">closing within 7 days</span></div>
+    <div class="stat"><span class="stat-num" id="stat-beginner">–</span><span class="stat-label">beginner-friendly</span></div>
+  </section>
+
+  <section class="live-bar" id="live-bar" role="status">
+    <span class="live-dot" id="live-dot"></span>
+    <span id="live-text">Checking live Taskmarket feed…</span>
+  </section>
+
+  <section class="controls" aria-label="Filter opportunities">
+    <input type="search" id="q" placeholder="Search title, platform or keyword…" aria-label="Search">
+    <select id="type-filter" aria-label="Filter by type">
+      <option value="all">All types</option>
+      <option value="hackathon">Hackathons</option>
+      <option value="bounty">Bounties</option>
+      <option value="campaign">Campaigns</option>
+    </select>
+    <select id="platform-filter" aria-label="Filter by platform">
+      <option value="all">All platforms</option>
+    </select>
+    <select id="min-reward" aria-label="Minimum reward">
+      <option value="0">Any reward</option>
+      <option value="1">$1+</option>
+      <option value="100">$100+</option>
+      <option value="1000">$1,000+</option>
+      <option value="10000">$10,000+</option>
+    </select>
+    <select id="sort" aria-label="Sort by">
+      <option value="deadline">Sort: deadline (soonest)</option>
+      <option value="reward">Sort: highest reward</option>
+      <option value="title">Sort: title A–Z</option>
+    </select>
+    <label class="check"><input type="checkbox" id="beginner-only"> Beginner-friendly only</label>
+  </section>
+
+  <p class="result-count" id="result-count"></p>
+  <section class="grid" id="grid" aria-live="polite"></section>
+
+  <section class="how">
+    <h2>How it works</h2>
+    <ol>
+      <li><strong>One screen, every board.</strong> Hackathons, micro-bounties and paid-per-view campaigns are stitched together from sources that were never designed to talk to each other — Devpost, Kaggle, Taskmarket, Content Rewards.</li>
+      <li><strong>Verified, not scraped blindly.</strong> Each entry carries the date it was last verified live and a note on who can join, so a beginner in Indonesia never wastes a week on a US-only contest.</li>
+      <li><strong>Live where possible.</strong> The app tries the public Taskmarket API on load and merges fresh tasks in. When the API is down it falls back to the bundled snapshot and says so plainly.</li>
+    </ol>
+  </section>
+
+  <footer class="site-footer">
+    <p>Snapshot data verified 16 Nov 2026. Deadlines and prizes change — always re-check the official page before entering. No account needed to browse. Gig Radar stores nothing about you; filter preferences stay in your browser only.</p>
+    <p>Open source (MIT). Built for Kiroween 2026.</p>
+  </footer>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
