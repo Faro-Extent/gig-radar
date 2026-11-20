@@ -140,7 +140,7 @@ ak-quakes-2026-09.csv — one row per event returned (864 rows), sorted by time 
 Columns, in order: id, time, mag, magType, place, depth, type, tsunami. Values as returned by the source.
 
 ```synmerco-data
-15e863efafd4025bcb62096ec89e72f46f9e76242d586315719c44e501625dd4 ak-quakes-2026-09.csv
+44d9451e9d70c6e6c477d5194eaee52914626b3ae7368203928f10ac97c14081 ak-quakes-2026-09.csv
 ```
 
 No advice, opinion or forecast is offered beyond the source.
